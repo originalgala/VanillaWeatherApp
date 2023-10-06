@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyWeatherNow</title>
+    <title>WeatherToday</title>
 
     <link rel="stylesheet" href="src/style.css" />
 
@@ -20,11 +20,40 @@
     ></script>
   </head>
   <body>
+    <span
+      ><img
+        src="images/logoicon.png"
+        alt="icon with clouds sun and rain"
+        width="35px"
+      />
+      <em>WeatherToday</em></span
+    >
     <div class="container">
-      <h1>Hello world</h1>
+      <div class="weatherborder">
+        <h1>Rosslyn</h1>
+        <h2 class="date-time">Friday 11:18</h2>
+        <h3 class="conditions">clear</h3>
 
-      <a href="" class="btn btn-success"> button</a>
+        <div class="row">
+          <div class="col-6">
+            <img src="images/sunny.png" alt="sun" width="50px" /> 15 °C | °F
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>humidity: 0%</li>
+              <li>Wind: 5km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+    <small
+      ><a href="https://github.com/originalgala/VanillaWeatherApp">
+        open-source code
+      </a>
+      by Galaletsang Tlholoe
+    </small>
+
     <script src="src/app.js"></script>
   </body>
 </html>
