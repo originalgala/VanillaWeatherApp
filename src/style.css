@@ -29,8 +29,25 @@ font-family: playfair;
  li {
  list-style: none;
  font-style: italic;
-
 }
 
+.weather-temperature img {
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+}
 
- 
+.weather-temperature strong {
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+ .weather-temperature a {
+    color: aquamarine;
+    list-style: none;
+ }
+
+ .units {
+    font-size: 20px;
+ }
