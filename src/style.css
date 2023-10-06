@@ -1,0 +1,36 @@
+body {
+background: linear-gradient(175deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%);
+color: #fff;
+font-family: playfair;
+}
+.weatherborder {
+    max-width: 600px;
+    border: 1px solid rgb(13, 231, 158);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+  
+}
+ .logo{
+    display: block;
+    margin: 10px;
+ }
+
+ .logo-icon {
+    border: solid 2px;
+    border-radius: 50%;
+ }
+ 
+ h1 { 
+    font-weight: 600;
+    margin-bottom: 0;
+ }
+
+ li {
+ list-style: none;
+ font-style: italic;
+
+}
+
+
+ 
