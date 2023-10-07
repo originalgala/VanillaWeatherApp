@@ -27,21 +27,23 @@
   </head>
   <body>
     <span
-      class="logo"><img
+      class="logo">
+      <img
         src="images/logoicon.png"
         alt="icon with clouds sun and rain"
         width="35px"
         class="logo-icon"
       />
-      <em>WeatherToday</em></span
-    >
+      <em>WeatherToday</em>
+      </span>
+
     <div class="container">
       <div class="weatherborder">
 
         <section class="main-display">
           <h1 id="city-display">Rosslyn</h1>
         <h3 id="date-time">Friday 11:18</h3>
-        <h3 id="conditions">clear</h3>
+        <h4 id="conditions">clear</h4>
         </section>
 
         <div class="row">
@@ -49,13 +51,27 @@
             <div class="d-flex weather-temperature">
             <img src="images/sunny.png" alt="sun" width="50px" /> 
             <div>
-              <strong class="temperature"></strong>
+
+              <strong 
+              class="temperature">
+            </strong>
             </div> 
-            <span class="units">°C | <a href="#">°F</a></span>
+            <span class="units">
+              °C | <a href="#">°F</a>
+            </span>
           </div>
         </div>
-          <div class="col-6">
+          
+        <div class="col-6">
+    
+          
             <ul>
+              <li>
+                <div class="wind-humidity-icon">
+               <img src="images/humidity_precipitation.png" alt="precipitation icon" id="humidity-icon" width="30px">
+              <img src="images/blow_swirl.png" alt="wind icon" id="wind-icon" width="40px">
+         </div>
+        </li>
               <li>humidity: <em id="humidity"></em>%</li>
               <li>Wind: <em id="windspeed"></em>km/h</li>
             </ul>
