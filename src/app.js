@@ -18,7 +18,9 @@ function showDate (timestamp) {
 
 function showTemperature(response) {
     
-    document.querySelector(".temperature").innerHTML = Math.round(response.data.temperature.current); 
+    celsiusTemp = Math.round(response.data.temperature.current)
+
+    document.querySelector(".temperature").innerHTML = celsiusTemp; 
 
     document.querySelector("#conditions").innerHTML = response.data.condition.description;
 
@@ -49,7 +51,18 @@ search(city.value);
 console.log(city);
 }
 
-search("Pretoria");
-
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", cityName);
+
+function displayFehrenheit (event) {
+event.preventDefault();
+let fehereinheitTemp = document.querySelector(".temperature");
+let convertedTemp = (celsiusTemp * 9) / 5 +32
+fehereinheitTemp.innerHTML = Math.round(convertedTemp);
+}
+
+let fehrenheitTemp = document.querySelector("#fehreinheit");
+fehrenheitTemp.addEventListener("click", displayFehrenheit);
+
+let celsiusTemp = null;
+search("Pretoria");
