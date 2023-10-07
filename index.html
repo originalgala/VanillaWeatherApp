@@ -19,6 +19,7 @@
       crossorigin="anonymous"
     ></script>
     
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
@@ -38,9 +39,9 @@
       <div class="weatherborder">
 
         <section class="main-display">
-          <h1>Rosslyn</h1>
-        <h3 class="date-time">Friday 11:18</h3>
-        <h3 class="conditions">clear</h3>
+          <h1 id="city-display">Rosslyn</h1>
+        <h3 id="date-time">Friday 11:18</h3>
+        <h3 id="conditions">clear</h3>
         </section>
 
         <div class="row">
@@ -48,15 +49,15 @@
             <div class="d-flex weather-temperature">
             <img src="images/sunny.png" alt="sun" width="50px" /> 
             <div>
-              <strong>15</strong>
+              <strong class="temperature"></strong>
             </div> 
             <span class="units">°C | <a href="#">°F</a></span>
           </div>
         </div>
           <div class="col-6">
             <ul>
-              <li>humidity: 0%</li>
-              <li>Wind: 5km/h</li>
+              <li>humidity: <em id="humidity"></em>%</li>
+              <li>Wind: <em id="windspeed"></em>km/h</li>
             </ul>
           </div>
         </div>
