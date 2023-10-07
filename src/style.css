@@ -36,6 +36,21 @@ font-family: playfair;
  font-style: italic;
 }
 
+#search-engine {
+    margin-left: 30px;
+   padding: 15px 20px;
+    line-height: 20px;
+}
+
+#search-button {
+    background: #05a43c;
+        color: white;
+        width: 100px;
+}
+
+#city-input {
+    width: 300px; 
+}
 .weather-temperature {
     margin-top: 5px;
 }
