@@ -26,9 +26,10 @@ font-family: playfair;
     margin-bottom: 0;
  }
 
- h4 {
+ h3, h4:first-letter {
     text-transform: capitalize;
  }
+
 
  li {
  list-style: none;

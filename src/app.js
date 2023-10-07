@@ -1,5 +1,23 @@
+function showDate (timestamp) {
+    let date = new Date(timestamp);
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "saturday"];
+    let day = days[date.getDay()];
+
+    let hour = date.getHours();
+    if (hour < 10) {
+        hour = `0:${hour}`;
+    }
+
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+        minutes = `0:${minutes}`;
+    }
+
+    return `${day} ${hour}:${minutes} Local`  
+}
+
 function showTemperature(response) {
-    console.log(response.data)
+    
     document.querySelector(".temperature").innerHTML = Math.round(response.data.temperature.current); 
 
     document.querySelector("#conditions").innerHTML = response.data.condition.description;
@@ -10,7 +28,9 @@ function showTemperature(response) {
 
     document.querySelector("#city-display").innerHTML = response.data.city;
 
-    document.querySelector("img") = response.data.icon_url;
+    let currentTime = document.querySelector("#date-time");
+    currentTime.innerHTML = showDate(response.data.time * 1000);
+
 }
 
 
