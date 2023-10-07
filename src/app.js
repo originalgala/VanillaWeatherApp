@@ -31,6 +31,9 @@ function showTemperature(response) {
     let currentTime = document.querySelector("#date-time");
     currentTime.innerHTML = showDate(response.data.time * 1000);
 
+    let mainIcon = document.querySelector("#display-weather-icon");
+    let iconLink = response.data.condition.icon_url;
+    mainIcon.setAttribute("src", iconLink);
 }
 
 
