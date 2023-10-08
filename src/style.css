@@ -21,19 +21,26 @@ font-family: playfair;
     border-radius: 50%;
  }
  
- h1 { 
+ h2 { 
     font-weight: 600;
     margin-bottom: 0;
  }
 
- h3, h4:first-letter {
+ h4, h5:first-letter {
     text-transform: capitalize;
  }
 
-
+h5 {
+    margin-top: 20px;
+}
  li {
  list-style: none;
  font-style: italic;
+}
+
+input {
+    border-radius: 30px;
+    padding: 3px 15px 4px;
 }
 
 #search-engine {
@@ -41,16 +48,23 @@ font-family: playfair;
    padding: 15px 20px;
     line-height: 30px;
     margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+h6 {
+    text-align: center;
 }
 
 #search-button {
     background: #05a43c;
-        color: white;
-        width: 100px;
+    color: white;
+    width: 100px;
+    
 }
 
 #city-input {
     width: 300px; 
+    margin-left: 2px;
 }
 .weather-temperature {
     margin-top: 5px;
@@ -58,12 +72,15 @@ font-family: playfair;
 
 .weather-temperature img {
     margin-right: 5px;
-    height: 64px;
-    width: 64px;
+    height: 70px;
+    width: 70px;
+    padding: 0 0 10px 0;
+    
+    
 }
 
 .weather-temperature strong {
-    font-size: 64px;
+    font-size: 50px;
     line-height: 1;
     font-weight: 400;
 }
