@@ -18,7 +18,7 @@ function showDate (timestamp) {
 
 function showTemperature(response) {
     
-    celsiusTemp = Math.round(response.data.temperature.current)
+    celsiusTemp = Math.round(response.data.temperature.current);
 
     document.querySelector(".temperature").innerHTML = celsiusTemp; 
 
@@ -38,9 +38,11 @@ function showTemperature(response) {
     mainIcon.setAttribute("src", iconLink);
 }
 
+
+
 function search (city) {
-let apiKey = "00b38325ed040e371254ctd7ac1o8f0a"
-let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
+let apiKey = "00b38325ed040e371254ctd7ac1o8f0a";
+let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 axios.get(url).then(showTemperature);
 }
 
@@ -48,7 +50,6 @@ function cityName(event) {
     event.preventDefault();
 let city = document.querySelector("#city-input");
 search(city.value);
-console.log(city);
 }
 
 let form = document.querySelector(".search-form");
