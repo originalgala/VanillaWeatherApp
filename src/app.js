@@ -46,7 +46,6 @@ return days[day];
 }
 
 function forecast (response) {
-    console.log(response.data.daily);
     let dailyForecast = response.data.daily;
 
     let forecastDisplayed = document.querySelector("#forecast");
@@ -81,7 +80,6 @@ axios.get(url).then(showTemperature);
 
 let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 axios.get(forecastUrl).then(forecast);
-console.log(forecastUrl);
 }
 
 function cityName(event) {
@@ -93,15 +91,6 @@ search(city.value);
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", cityName);
 
-function displayFehrenheit (event) {
-event.preventDefault();
-let fehereinheitTemp = document.querySelector(".temperature");
-let convertedTemp = (celsiusTemp * 9) / 5 +32
-fehereinheitTemp.innerHTML = Math.round(convertedTemp);
-}
-
-let fehrenheitTemp = document.querySelector("#fehreinheit");
-fehrenheitTemp.addEventListener("click", displayFehrenheit);
 
 let celsiusTemp = null;
 search("Pretoria");
