@@ -38,6 +38,30 @@ function showTemperature(response) {
     mainIcon.setAttribute("src", iconLink);
 }
 
+function forecast () {
+    let forecastDisplayed = document.querySelector("#forecast");
+    
+    let forecastDays = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+     let forecastHTML = `<div class="row">`;
+
+    forecastDays.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+            <div class="col-2">
+              <div id="day">${day}</div>
+              <img src="images/sunny.png" alt="icon of weather conditions" width="40px" id="forecast-icon">
+              <div class="temp-high-low"> 
+              <span class="max-temp">12</span>/
+              <span class="max-temp">31</span>°C 
+            </div>
+            </div>`;
+    });
+   
+        forecastHTML =  forecastHTML + `</div>`;
+
+    forecastDisplayed.innerHTML = forecastHTML;
+            }
+
+
 function search (city) {
 let apiKey = "00b38325ed040e371254ctd7ac1o8f0a";
 let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -65,3 +89,4 @@ fehrenheitTemp.addEventListener("click", displayFehrenheit);
 
 let celsiusTemp = null;
 search("Pretoria");
+forecast();
