@@ -93,4 +93,5 @@ form.addEventListener("submit", cityName);
 
 
 let celsiusTemp = null;
-search("Pretoria");
+
+search("Pretoria")
