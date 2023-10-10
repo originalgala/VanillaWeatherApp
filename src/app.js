@@ -60,7 +60,7 @@ function forecast (response) {
               <div id="day">${showDay(forecastDay.time)}</div>
               <img src="${forecastDay.condition.icon_url}" alt="icon of weather conditions" width="60px" id="forecast-icon">
               <div class="temp-high-low"> 
-              <span class="min-temp">${Math.round(forecastDay.temperature.minimum)}</span>/
+              <span class="min-temp">${Math.round(forecastDay.temperature.minimum)}</span>°
               <span class="max-temp">${Math.round(forecastDay.temperature.maximum)}</span>°C 
             </div>
             </div>`;
