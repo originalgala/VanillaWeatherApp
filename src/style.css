@@ -103,3 +103,12 @@ text-decoration: none;
     color: #05a43c;
  }
  
+#day,
+.min-temp {
+    text-align: center;
+}
+
+#forecast-icon {
+   display: block;
+   margin: auto;
+}
