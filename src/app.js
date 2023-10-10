@@ -38,22 +38,34 @@ function showTemperature(response) {
     mainIcon.setAttribute("src", iconLink);
 }
 
-function forecast () {
+function showDay(timestamp){
+let date = new Date(timestamp * 1000);
+let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat",];
+let day = date.getDay();
+return days[day];
+}
+
+function forecast (response) {
+    console.log(response.data.daily);
+    let dailyForecast = response.data.daily;
+
     let forecastDisplayed = document.querySelector("#forecast");
     
-    let forecastDays = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+
      let forecastHTML = `<div class="row">`;
 
-    forecastDays.forEach(function (day) {
+   dailyForecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
         forecastHTML = forecastHTML + `
             <div class="col-2">
-              <div id="day">${day}</div>
-              <img src="images/sunny.png" alt="icon of weather conditions" width="40px" id="forecast-icon">
+              <div id="day">${showDay(forecastDay.time)}</div>
+              <img src="${forecastDay.condition.icon_url}" alt="icon of weather conditions" width="60px" id="forecast-icon">
               <div class="temp-high-low"> 
-              <span class="max-temp">12</span>/
-              <span class="max-temp">31</span>°C 
+              <span class="min-temp">${Math.round(forecastDay.temperature.minimum)}</span>/
+              <span class="max-temp">${Math.round(forecastDay.temperature.maximum)}</span>°C 
             </div>
             </div>`;
+    }
     });
    
         forecastHTML =  forecastHTML + `</div>`;
@@ -66,6 +78,10 @@ function search (city) {
 let apiKey = "00b38325ed040e371254ctd7ac1o8f0a";
 let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 axios.get(url).then(showTemperature);
+
+let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+axios.get(forecastUrl).then(forecast);
+console.log(forecastUrl);
 }
 
 function cityName(event) {
@@ -89,4 +105,3 @@ fehrenheitTemp.addEventListener("click", displayFehrenheit);
 
 let celsiusTemp = null;
 search("Pretoria");
-forecast();
