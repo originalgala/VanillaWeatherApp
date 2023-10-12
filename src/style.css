@@ -1,5 +1,7 @@
 body {
-background: linear-gradient(175deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%);
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/829/original/backroundimage2.png?1696954395);
+        background-size: cover;
+background-color: rgba(20, 38, 84, 0.815);
 color: #fff;
 font-family: playfair;
 }
@@ -9,7 +11,7 @@ font-family: playfair;
     border-radius: 15px;
     padding: 20px;
     margin-top: 20px;
-  
+  background: linear-gradient(170deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%);
 }
  .logo{
     display: block;
@@ -125,4 +127,8 @@ text-decoration: none;
     padding: 5px;
     margin-top: 10px;
     background-color: rgba(32, 58, 63, 0.575); 
+}
+
+a {
+    color: rgb(13, 213, 147);
 }
